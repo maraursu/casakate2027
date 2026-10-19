@@ -464,7 +464,7 @@ export const rooms = [
   {
     name: "Bedroom 1 · Master",
     sleeps: "King · 2",
-    who: "Anne and Kerrin",
+    who: "Thea and Kerrin",
     notes: "Main house, upstairs. Shares the stone fireplace with the living room. Photo is the ensuite — the king is through that door.",
     photo: "/rooms/bedroom-1-master.jpeg",
   },
@@ -506,7 +506,7 @@ export const rooms = [
   {
     name: "Sunken living room",
     sleeps: "Air mattresses · 2",
-    who: "Thea and Ali",
+    who: "Anne and Ali",
     notes: "No bedroom left. Two air mattresses.",
     photo: "/rooms/house-living.jpeg",
   },
