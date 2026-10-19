@@ -13,3 +13,11 @@ export function writeStore(key: string, value: string) {
     /* private mode / blocked storage */
   }
 }
+
+export function removeStore(key: string) {
+  try {
+    window.localStorage.removeItem(key);
+  } catch {
+    /* private mode / blocked storage */
+  }
+}

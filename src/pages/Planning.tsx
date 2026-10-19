@@ -1,13 +1,8 @@
-import { useEffect, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
+import { IdeaBoard } from "../components/IdeaBoard";
 import { RsvpResults } from "../components/RsvpResults";
-import {
-  PLANNING_PASSWORD,
-  PLANNING_UNLOCK_KEY,
-  planningLists,
-} from "../site";
+import { PLANNING_PASSWORD, PLANNING_UNLOCK_KEY } from "../site";
 import { readStore, writeStore } from "../storage";
-
-const NOTES_KEY = "kate-bach-planning-notes";
 
 function planningOpen() {
   return readStore(PLANNING_UNLOCK_KEY) === "yes";
@@ -17,11 +12,6 @@ export function Planning() {
   const [open, setOpen] = useState(planningOpen);
   const [guess, setGuess] = useState("");
   const [wrong, setWrong] = useState(false);
-  const [notes, setNotes] = useState("");
-
-  useEffect(() => {
-    setNotes(readStore(NOTES_KEY) ?? "");
-  }, []);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -69,36 +59,9 @@ export function Planning() {
         <p className="lede">for the girls only</p>
       </header>
 
+      <IdeaBoard />
+
       <RsvpResults />
-
-      {planningLists.map((list) => (
-        <section key={list.title} className="panel">
-          <h2>{list.title}</h2>
-          <ul className="vibe">
-            {list.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </section>
-      ))}
-
-      <section className="panel">
-        <h2>Scratch pad</h2>
-        <p className="fine">
-          we can collab here!! use this google doc link if anyone has ideas for
-          the weekend...&lt;3
-        </p>
-        <textarea
-          className="notes"
-          rows={10}
-          value={notes}
-          onChange={(e) => {
-            setNotes(e.target.value);
-            writeStore(NOTES_KEY, e.target.value);
-          }}
-          placeholder="ideas for the weekend..."
-        />
-      </section>
     </article>
   );
 }

@@ -78,7 +78,6 @@ export function Logistics() {
           </a>
         </p>
         <h3 className="subhead">Rooms</h3>
-        <p className="fine">Who sleeps where is blank on purpose. Names later.</p>
         <ul className="room-grid">
           {rooms.map((room) => (
             <li key={room.name} className="room-card">

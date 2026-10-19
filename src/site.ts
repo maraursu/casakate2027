@@ -464,44 +464,51 @@ export const rooms = [
   {
     name: "Bedroom 1 · Master",
     sleeps: "King · 2",
-    who: "",
+    who: "Anne and Kerrin",
     notes: "Main house, upstairs. Shares the stone fireplace with the living room. Photo is the ensuite — the king is through that door.",
     photo: "/rooms/bedroom-1-master.jpeg",
   },
   {
     name: "Bedroom 2 · Queen + balcony",
     sleeps: "Queen · 2",
-    who: "",
+    who: "Marisa and Molly M.",
     notes: "Upstairs in the main house, balcony, orange wall.",
     photo: "/rooms/bedroom-2-queen-balcony.jpeg",
   },
   {
     name: "Bedroom 3 · Pool house",
     sleeps: "King · 2",
-    who: "",
+    who: "Kate and Mara",
     notes: "Separate guest/pool house. King bed, living room, steam shower and sauna.",
     photo: "/rooms/bedroom-3-poolhouse-king.jpeg",
   },
   {
     name: "Bedroom 4 · Two queens",
     sleeps: "2 queens · 4",
-    who: "",
+    who: "Gen, Jess, Claire, and Shelbi",
     notes: "Upstairs in the main house. Best for a four-person pile-in.",
     photo: "/rooms/bedroom-4-two-queens.jpeg",
   },
   {
     name: "Bedroom 5 · Downstairs queen",
     sleeps: "Queen · 2",
-    who: "",
+    who: "Chan and Molly G.",
     notes: "Ground floor of the main house, wood wall.",
     photo: "/rooms/bedroom-5-downstairs-queen.jpeg",
   },
   {
     name: "Bedroom 6 · Double + ensuite",
     sleeps: "Double · 2",
-    who: "",
+    who: "Lynn and Lily",
     notes: "Ground floor of the main house, its own bath. Cozy / yellow room.",
     photo: "/rooms/bedroom-6-double.jpeg",
+  },
+  {
+    name: "Sunken living room",
+    sleeps: "Air mattresses · 2",
+    who: "Thea and Ali",
+    notes: "No bedroom left. Two air mattresses.",
+    photo: "/rooms/house-living.jpeg",
   },
 ];
 
@@ -608,6 +615,9 @@ export const girls: {
   { name: "Claire", photo: "/girls/claire.jpg", crop: "52% 62%", zoom: 1.55 },
   { name: "Gen", photo: "/girls/gen.jpg", crop: "40% 30%", zoom: 1.55 },
   { name: "Shelbi" },
+  { name: "Chan" },
+  { name: "Molly G." },
+  { name: "Anne" },
 ];
 
 export const costs = {
@@ -640,20 +650,4 @@ export const costs = {
 export const needs = [
   "Travel plans and dietary restrictions — survey on the welcome page.",
   "Must-dos or hard nos.",
-];
-
-export const planningLists = [
-  {
-    title: "Games",
-    items: [
-      "Slideshow with pics",
-      "Quiplash",
-      "Sam questions",
-      "Kate jeopardy",
-    ],
-  },
-  {
-    title: "Ideas",
-    items: ["Water coloring"],
-  },
 ];
